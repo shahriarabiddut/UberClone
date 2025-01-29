@@ -56,6 +56,9 @@ The backend server should now be running on `http://localhost:5000`.
 - `GET /users/profile` - Get user profile (protected route)
 - `GET /users/logout` - Logout a user (protected route)
 - `POST /captains/register` - Register a new captain
+- `POST /captains/login` - Login a captain
+- `GET /captains/profile` - Get captain profile (protected route)
+- `GET /captains/logout` - Logout a captain (protected route)
 
 ### Dependencies
 
