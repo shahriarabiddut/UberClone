@@ -171,3 +171,113 @@ Example:
     "error": "Internal Server Error"
   }
   ```
+
+# User Profile Endpoint
+
+## GET /users/profile
+
+### Description
+
+This endpoint is used to get the profile of the authenticated user.
+
+### Request Headers
+
+- `Authorization`: Bearer token (required)
+
+Example:
+
+```http
+GET /users/profile HTTP/1.1
+Host: localhost:5000
+Authorization: Bearer jwt-auth-token
+```
+
+### Responses
+
+#### Success
+
+- **Status Code**: 200 OK
+- **Response Body**:
+  ```json
+  {
+    "_id": "user-id",
+    "fullname": {
+      "firstname": "John",
+      "lastname": "Doe"
+    },
+    "email": "john.doe@example.com",
+    "socketId": null
+  }
+  ```
+
+#### Authentication Errors
+
+- **Status Code**: 401 Unauthorized
+- **Response Body**:
+  ```json
+  {
+    "message": "Authentication required!"
+  }
+  ```
+
+#### Server Errors
+
+- **Status Code**: 500 Internal Server Error
+- **Response Body**:
+  ```json
+  {
+    "error": "Internal Server Error"
+  }
+  ```
+
+# User Logout Endpoint
+
+## GET /users/logout
+
+### Description
+
+This endpoint is used to log out the authenticated user.
+
+### Request Headers
+
+- `Authorization`: Bearer token (required)
+
+Example:
+
+```http
+GET /users/logout HTTP/1.1
+Host: localhost:5000
+Authorization: Bearer jwt-auth-token
+```
+
+### Responses
+
+#### Success
+
+- **Status Code**: 200 OK
+- **Response Body**:
+  ```json
+  {
+    "message": "Logged Out Successfully!"
+  }
+  ```
+
+#### Authentication Errors
+
+- **Status Code**: 401 Unauthorized
+- **Response Body**:
+  ```json
+  {
+    "message": "Authentication required!"
+  }
+  ```
+
+#### Server Errors
+
+- **Status Code**: 500 Internal Server Error
+- **Response Body**:
+  ```json
+  {
+    "error": "Internal Server Error"
+  }
+  ```

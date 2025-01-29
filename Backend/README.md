@@ -53,12 +53,25 @@ The backend server should now be running on `http://localhost:5000`.
 
 - `POST /users/register` - Register a new user
 - `POST /users/login` - Login a user
+- `GET /users/profile` - Get user profile (protected route)
+- `GET /users/logout` - Logout a user (protected route)
 
 ### Dependencies
 
 - cors: ^2.8.5
 - dotenv: ^16.4.7
 - express: ^4.21.2
+- bcrypt: ^5.0.1
+- jsonwebtoken: ^8.5.1
+- mongoose: ^6.0.12
+- cookie-parser: ^1.4.5
+- express-validator: ^6.12.2
+- body-parser: ^1.20.3
+
+### DevDependencies
+
+- nodemon: ^2.0.22
+- eslint: ^8.45.0
 
 ### License
 
