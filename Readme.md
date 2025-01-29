@@ -29,8 +29,6 @@ UberClone/
 │   ├── models/         # Mongoose models
 │   ├── routes/         # Express routes
 │   ├── middlewares/    # Custom middleware functions
-<!-- │   ├── config/         # Configuration files (e.g., database, environment) -->
-<!-- │   ├── utils/          # Utility functions -->
 │   ├── server.js       # Entry point for the backend server
 │   └── package.json    # Backend dependencies and scripts
 ├── backend/db/         # MongoDB configurations
@@ -42,3 +40,4 @@ UberClone/
 - Server Setup , DB Setup , User Model and Controller
 - User Registration and Login
 - User Profile and LogOut - Middleware and Blacklist Token
+- Captain Registration
