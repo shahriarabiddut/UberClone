@@ -42,6 +42,9 @@ UberClone/
 - **DB Setup**: Created initial MongoDB schemas and models.
 - **User Model and Controller**: Implemented user model and basic user controller.
 - **User Registration and Login**: Added user registration and login functionality with JWT authentication.
-- **User Profile and Logout**: Developed user profile management and logout functionality with token blacklisting.
 - **Middleware and Blacklist Token**: Implemented middleware for authentication and token blacklisting.
-- **Captain Registration**: Added captain (driver) registration feature.
+- **User Profile and Logout**: Developed user profile view and logout functionality with token blacklisting.
+- **Captain Registration,**: Added captain (driver) registration feature.
+- **Captain Middleware and Blacklist Token**: Implemented middleware for authentication and token blacklisting for Captain.
+- **Captain Login, Profile and Logout**: Developed captain login , profile view and logout functionality with token blacklisting.
+- **FrontEnd** : Project Setup and Homepage Design!
