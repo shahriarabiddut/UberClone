@@ -11,9 +11,9 @@ const Home = () => {
           alt=""
         />
         <div className="bg-white p-4">
-          <h2 className="text-2xl font-bold">Get Started With Uber</h2>
+          <h2 className="text-3xl font-bold">Get Started With Uber</h2>
           <Link to={`/login`}>
-            <button className="w-full bg-black text-white py-3 cursor-pointer hover:bg-gray-100 hover:text-black font-bold hover rounded-lg mt-2">
+            <button className="w-full bg-black text-white py-3 cursor-pointer hover:bg-gray-100 hover:text-black font-bold hover rounded-lg mt-4">
               Continue
             </button>
           </Link>
