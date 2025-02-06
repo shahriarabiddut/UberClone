@@ -200,13 +200,15 @@ Authorization: Bearer jwt-auth-token
 - **Response Body**:
   ```json
   {
-    "_id": "user-id",
-    "fullname": {
-      "firstname": "John",
-      "lastname": "Doe"
-    },
-    "email": "john.doe@example.com",
-    "socketId": null
+    "user": {
+      "_id": "user-id",
+      "fullname": {
+        "firstname": "John",
+        "lastname": "Doe"
+      },
+      "email": "john.doe@example.com",
+      "socketId": null
+    }
   }
   ```
 

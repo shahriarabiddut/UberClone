@@ -1,14 +1,27 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { UserDataContext } from "../context/UserContext";
+import useAxiosPublic from "../hooks/useAxiosPublic";
 
 const UserLogin = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [userData, setUserData] = useState({});
-  const handleSubmit = (e) => {
+  const { user, setUser } = useContext(UserDataContext);
+  const navigate = useNavigate();
+  const axiosPublic = useAxiosPublic();
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    setUserData({ email, password });
+    const userData = { email, password };
+    const response = await axiosPublic.post("/users/login", userData);
+    if (response.status === 200) {
+      const data = response.data;
+      setUser(data.user);
+      localStorage.setItem("token", data.token);
+      navigate(`/home`);
+    }
     // console.log(userData);
+    setEmail("");
+    setPassword("");
   };
   return (
     <div className="p-7 flex flex-col justify-between h-screen">
